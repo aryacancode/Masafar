@@ -1,0 +1,192 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;500&family=Quicksand:wght@300;400;500;600&display=swap');
+.navbar{
+    background-color: #6F4E37;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 20px 10px;
+    z-index: 99;
+    max-width: 100%;
+    /* max-height: 700px; */
+}
+.logo{
+    text-decoration: none;
+    color: #ffff;
+}
+.navbar-right a {
+    font-family: 'Quicksand', sans-serif;
+    float: left;
+    text-align: center;
+    padding:  0 12px 12px 12px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    line-height: 25px;
+}
+.navbar-right{
+    float: right;
+}
+.navbar-right .menu-icon{
+    display: none;
+}
+.bg-image{
+    height: 700px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#overlay {
+    position: relative; 
+    width: 100%; 
+    height: 700px; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 2; 
+  }
+.caption{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    text-align: center;
+}
+.caption-title{
+    color: white;
+    margin-bottom: 50px;
+    font-size: 60px;
+}
+.caption-details{
+    color: white;
+    font-size: 20px;
+}
+.projects{
+    /* width: 60vw; */
+    padding: 5% 8% 8% 8%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2cm ;
+    border: none;
+    justify-content: center;
+}
+.project-header{color: #483C32;
+    margin-top: 3%;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 35px;
+}
+.border{
+    border-bottom: 1px solid #483C32;
+    width: 200px;
+    margin: 7px auto;
+}
+img{
+    width: 400px;
+    height:420px ;
+    object-fit: cover;
+}
+.footer{
+    margin-top: 4%;
+    background-color: #6F4E37;
+    color: white;
+    padding: 30px 10px 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5cm;
+    justify-content: center;
+}
+.column-one{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5cm;
+}
+#head{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+.column-one, .column-two, .column-three{
+    width: 300px;
+    /* text-align: center; */
+    line-height: 23px;
+}
+.title{
+    padding-bottom: 2%;
+    border-bottom: 3px solid #483C32 ;
+    font-family: 'Quicksand', sans-serif;
+}
+.frm{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+}
+.title{
+    margin-bottom: 5%;
+}
+.footer-icon{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 10px;
+    display: inline-flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        padding: 10px;
+    }
+    .navbar .menu{
+        display: none;
+    }
+    .navbar-right .menu-icon{
+        display: block;
+        position: absolute;
+        top: 13px;
+        right: 13px;
+    }
+    .navbar.show{
+        background: black;
+    }
+    .navbar.show .menu{
+        display: block;
+        width: 100%;
+    }
+    .navbar.show .menu a{
+        width: 100%;
+    }
+    .caption{
+        width: 70vw;
+    }
+    .caption-title{
+        font-size: 50px;
+    }
+    .footer{
+        gap: 2cm;
+    }
+}
+@media (max-width: 425px) {
+    .caption{
+        width: 70vw;
+    }
+    .caption-title{
+        font-size: 40px;
+    }
+}
